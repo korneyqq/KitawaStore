@@ -1,12 +1,12 @@
 from django.urls import path
 from django.conf.urls.static import static
 from django.conf import settings
-from . import views
+from users.views import login, register
 
 
 urlpatterns = [
-    path('login', views.login, name="login"),
-    path('register', views.register, name="register")
+    path('login', login, name="login"),
+    path('register', register, name="register")
 ]
 
 
