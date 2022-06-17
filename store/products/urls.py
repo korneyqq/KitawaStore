@@ -6,7 +6,10 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name="home"),
-    path('products', views.products, name="products")
+    path('products', views.products, name="products"),
+    path('<int:category_id>/', views.products, name="products"),
+    path('basket-add/<int:product_id>', views.basket_add, name='basket_add'),
+    path('basket-delete/<int:id>', views.basket_delete, name='basket_delete'),
 ]
 
 
